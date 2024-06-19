@@ -1,0 +1,11 @@
+{% load static %}
+<div class="slider" id="slider-comp">
+    <div class="slide-track">
+        <div v-for="(blog, index) in blogDetail" :key="index" class="card blog-thumbnail" style="width: 18rem; margin: 20px;">
+            <img class="card-img-top" :src="blog.post_image" id="post" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">[[blog.title]]</h5>
+            </div> 
+        </div>
+    </div>
+</div>

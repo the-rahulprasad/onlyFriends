@@ -1,0 +1,40 @@
+{% extends 'blog_write_base.html' %}
+{% block write_content %}
+<div id="write-blog" class="container"
+    style="color: #fff; border: 1px solid #fff; box-shadow: 0 0.5rem 1rem silver; width: 700px; height:400px; border-radius: 10px">
+    <div class="row d-flex" style="align-items: center; border-bottom: 1px solid #fff ">
+        <div class="col">
+            <h1 class="text-gradient">Add Post</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form @submit.prevent="submitForm">
+                {% csrf_token %}
+                <div class="row" style="display: flex; flex-wrap: wrap; margin-bottom: 10px;">
+                    <div class="col" style="flex: 1; min-width: 200px; margin: 5px;">
+                        <span>Title</span><br>
+                        <input type="text" v-model="title" placeholder="Title" style="width: 100%; border-radius: 10px;">
+                    </div>
+                    <div class="col" style="flex: 1; min-width: 200px; margin: 5px;">
+                        <span>Upload Image</span>
+                        <input type="file" @change="handleFileUpload" accept="image/*" style="width: 100%;">
+                    </div>
+                </div>
+                <div class="row" style="display: flex; flex-wrap: wrap;">
+                    <div class="col" style="flex: 1 1 100%; margin: 5px;">
+                        <span>Blog Content</span><br>
+                        <textarea v-model="blogContent" style="width: 100%; height: 150px;"></textarea>
+                    </div>
+                </div>
+                <div class="col" style="display: flex; justify-content: flex-end; margin: 5px; border-radius: 5px;">
+                    <input type="submit" value="Submit" style="width: auto;">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+{% endblock %}

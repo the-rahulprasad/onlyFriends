@@ -1,0 +1,28 @@
+  {% extends 'home_base.html' %}
+  {% block home_content %}
+  {% load static %}
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      </div>
+      {% include 'slider.html '%}
+    </div>
+  </div>
+  <div class="container">
+    <div class="row d-flex" style=>
+      <div v-for="blog in blogDetail" class="col m-2 blog-thumbnail">
+        <div class="card" style="width: 15rem; height: 15rem; overflow: hidden;">
+          <a :href="[[blog.id]]">
+            <img class="card-img-top cursor-pointer fixed-size-img" :src="blog.post_image" alt="Card image cap" >
+          </a>
+          <div class="card-body" >
+            <h5 class="card-title">[[blog.title]]</h5>
+            <span>[[blog.author.first_name + " " + blog.author.last_name]]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  {% endblock %}

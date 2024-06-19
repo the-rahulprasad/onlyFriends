@@ -1,0 +1,31 @@
+.blog-thumbnail {
+    transition: transform 0.3s ease;
+    
+}
+
+.blog-thumbnail:hover {
+    transform: scale(1.1);
+    
+}
+
+.cursor-pointer:hover{
+    cursor: pointer;
+}
+
+.write-form-container{
+    color: #fff; 
+    border: 1px solid #fff; 
+    box-shadow: 0 0.5rem 1rem silver; 
+    width: 1000px; 
+    height:400px;
+}
+
+.fixed-size-img {
+    width: 100%; /* Make the image fill the container horizontally */
+    height: auto; /* Let the browser calculate the height while maintaining the aspect ratio */
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+  }

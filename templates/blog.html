@@ -1,0 +1,55 @@
+{% extends 'blog_base.html' %}
+{% block content%}
+<div class="container">
+    <div class="row">
+        <h1 style="color:#fff">
+            {{blog_details.title}}
+        </h1>
+    </div>
+    <div class="banner" id="banner">
+        <swiper-container class="mySwiper" navigation="true">
+            <swiper-slide>
+                <div class="imgbx">
+                    <a href="#news"><img src="{{blog_details.post_image.url}}" alt="" style="width:100%; object-fit:cover;"></a>
+                </div>
+                <div class="text">
+                    <h1>{{blog_details.title}}</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, minima.</p>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="imgbx">
+                    <a href="#"><img src="https://i.postimg.cc/L8N4npDS/pexels-miguel-acosta-1259626.jpg" alt=""></a>
+                </div>
+                <div class="text">
+                    <h1>UPCOMING EVENTS</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, minima.</p>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="imgbx">
+                    <a href="#"><img src="https://i.postimg.cc/8k27SNKn/pexels-arthouse-studio-4413745.jpg" alt=""></a>
+                </div>
+                <div class="text">
+                    <h1>AVAILABLE JOBS</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, minima.</p>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+    </div>
+    <!--NEWS SECTION-->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <img src="{{blog_details.post_image.url}}">
+                </div>
+            </div>
+
+            <div class="row" style="color:#fff">
+                <p>
+                    {{blog_details.body}}
+                </p>
+            </div>
+        </div>
+        {% endblock %}
